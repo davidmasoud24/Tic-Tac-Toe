@@ -32,9 +32,11 @@
 .box {
   display: grid;
   margin: 0 auto;
+  padding: 10px;
   max-width: 300px;
-  grid-template-columns: 33% 33% 33%;
-  grid-template-rows: 33% 33% 33%;
+  max-height: 40em;
+  grid-template-columns: 33.5% 33.5% 33.5%;
+  grid-template-rows: 33.5% 33.5% 33.5%;
 }
 
 .square {
@@ -59,16 +61,13 @@
   background-color: turquoise;
   color: black;
   border: none;
-  border-radius: 20px;
-  padding: 16px;
-  font-size: 18px;
-  margin-left: 37.7em;
+  border-radius: 18px;
+  padding: 10px;
+  font-size: 12px;
+  margin-left: 58em;
+  max-width: 300px;
 }
 
 .player-x {
   color: red;
-}
-
-.player-o {
-  color: blue;
 }
