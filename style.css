@@ -29,7 +29,7 @@
   display: none;
 }
 
-.box {
+#board {
   display: grid;
   margin: 0 auto;
   padding: 10px;
@@ -39,7 +39,7 @@
   grid-template-rows: 33.5% 33.5% 33.5%;
 }
 
-.square {
+.cell {
   border: 3px solid whitesmoke;
   min-width: 100px;
   min-height: 100px;
@@ -70,4 +70,8 @@
 
 .player-x {
   color: red;
+}
+
+.player-o {
+  color: blue;
 }
