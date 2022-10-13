@@ -1,6 +1,10 @@
 const board = document.getElementById("board");
 let gameState = {
   currentPlayer: "X",
+  otherPlayer: "O",
+  gameTurn: true,
+  gameWin: false,
+  gameDraw: false,
 
   board: [
     [null, null, null],
@@ -30,7 +34,18 @@ const playerMove = (id) => {
   gameState.board[row][column];
 
   if (gameState.board[row][column] === null) {
-    gameState.board[row][column] = gameState.currentPlayer;
+    if (gameState.gameTurn === true) {
+      gameState.board[row][column] = gameState.currentPlayer;
+      gameState.gameTurn = false;
+      const cell = document.getElementById(`${row},${column}`);
+      cell.innerText = gameState.currentPlayer;
+    } else {
+      gameState.board[row][column] = gameState.otherPlayer;
+      gameState.gameTurn = true;
+      const cell = document.getElementById(`${row},${column}`);
+      cell.innerText = gameState.otherPlayer;
+    }
   }
+
   console.log(gameState.board);
 };
